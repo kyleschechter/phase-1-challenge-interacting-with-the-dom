@@ -12,7 +12,7 @@ function counters() {
 }
 
 function decrement() {
-    if(counter.innerHTML > 0) {
+    if (counter.innerHTML > 0) {
             counter.innerHTML--
     }
 }
@@ -22,28 +22,28 @@ function increment() {
 }
 
 function pauseTime() {
-    if(pause.innerHTML != 'Play') {
+    if (pause.innerHTML != 'Play') {
         clearInterval(count) 
         pause.innerHTML = 'Play'
 
-    }else{
-        counters();
+    } else {
+        counters()
         pause.innerHTML = 'pause'
     }
 }
 
-let numClear = 0
+let num = 0
 
 function likes() {
     let like = document.querySelector('.likes')
     let likeUl = document.createElement('ul')
     let likeLi = document.createElement('ls')
     let currentCount = counter.innerHTML
-    if(numClear >= 0) {
-        numClear++
-        likeLi.innerHTML = `${currentCount} has been liked ${numClear} time`
-        like.append(likeUl)
+    if (num >= 0) {
+        num++
+        likeLi.innerHTML = `${currentCount} has been liked ${num} time(s)`
         likeUl.append(likeLi)
+        like.append(likeUl)
     }
  }
 
